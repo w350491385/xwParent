@@ -1,0 +1,9 @@
+系统技术：jooq + spring + jsonrpc + maven
+
+1.使用如下命令可以进行根据不同的环境打包
+mvn clean install -Dmaven.test.skip -Pdevelop
+2.使用如下命令，进行sql生成到数据库
+1.mvn flyway:migrate 按sql生成数据库表
+2.mvn flyway:clean 清除数据库表
+3.使用如下命令 按数据库表生成java代码
+mvn jooq-codegen:generate
